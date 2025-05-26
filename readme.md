@@ -1,21 +1,24 @@
 (01)
-Postgress hocche ekta open-source relational database management system (RDBMS) ja SQL (Structured Query Language) er upor base kore. Ekane data store kora hoy, query kora hoy, ebong manage kora jay
+পোস্টগ্রেস হচ্ছে একটি ওপেন-সোর্স রিলেশনাল ডাটাবেস ম্যানেজমেন্ট সিস্টেম (RDBMS) যা SQL স্ট্রাকচার্ড কোয়েরি ল্যাংগুয়েজ এর উপর ভিত্তি করে তৈরি। এখানে ডাটা সংরক্ষণ করা হয়, কোয়েরি চালানো হয়, এবং পরিচালনা করা যায়।
 
 (2)
-databese er moddhe schema hocche ekti folder ba structure, ekhane table, database object, view, guchiye rakha jai alada alada folder er moto. Schema er maddhome amra database er moddhe alada alada logical grouping create korte pari.
+ডাটাবেসের মধ্যে স্কিমা হলো একটি ফোল্ডার বা স্ট্রাকচারের মতো, যেখানে টেবিল, ডাটাবেস অবজেক্ট, ভিউ ইত্যাদি গুছিয়ে রাখা যায় আলাদা আলাদা ফোল্ডারের মতো। স্কিমার মাধ্যমে আমরা ডাটাবেসের মধ্যে আলাদা আলাদা লজিক্যাল গ্রুপ তৈরি করতে পারি।
 
 (3)
-ekta table e unique praimary key thaka uchit, ja row gulo ke uniquely identify kore. Primary key er maddhome amra ek table k onno table er sathe relate korte pari. Primary key er maddhome amra data integrity maintain korte pari, karon primary key er value duplicate hote pare na.
+একটা টেবিলে ইউনিক প্রাইমারি কী থাকা উচিত, যা প্রতিটি রো কে আলাদাভাবে সনাক্ত করতে সাহায্য করে। প্রাইমারি কী-এর মাধ্যমে আমরা একটি টেবিলকে অন্য টেবিলের সাথে সম্পর্কিত করতে পারি। এছাড়া, প্রাইমারি কী ব্যবহারের মাধ্যমে ডাটার সঠিকতা data integrity বজায় রাখা যায়, কারণ প্রাইমারি কী-এর মান কখনোই ডুপ্লিকেট হতে পারে না।
 
-forign key hocche ekta column ba set of columns ja onno table er primary key er sathe relate kore. Foreign key er maddhome amra ek table theke onno table e data reference korte pari. Ete data integrity maintain hoy, karon foreign key er value onno table er primary key er value er sathe match korte hoy.
+ফরেন কি হচ্ছে একটি কলাম বা কলামগুলোর সমষ্টি, যা অন্য একটি টেবিলের প্রাইমারি কি-এর সাথে সম্পর্কিত থাকে। ফরেন কি-এর মাধ্যমে আমরা এক টেবিল থেকে অন্য টেবিলের ডাটার রেফারেন্স করতে পারি। এর ফলে ডাটার integrity বজায় থাকে, কারণ ফরেন কি-এর মান অবশ্যই সেই টেবিলের প্রাইমারি কি-এর মানের সাথে মিলতে হবে।
+
 
 (4)
-where clause hocche SQL er ekta clause ja query er moddhe condition add kore. Ete amra specific row gulo ke filter korte pari. Where clause er maddhome amra data query er moddhe condition add korte pari jemon specific column er value er sathe match kora.
+WHERE ক্লজ হচ্ছে SQL-এর একটি ক্লজ, যা কোয়েরির মধ্যে শর্ত condition যোগ করে। এর মাধ্যমে আমরা নির্দিষ্ট সারিগুলোকে ফিল্টার করতে পারি। WHERE ক্লজের সাহায্যে আমরা ডেটা কোয়েরিতে শর্ত প্রয়োগ করতে পারি, যেমন কোনো নির্দিষ্ট কলামের মানের সাথে মিল থাকা।
+
 
 (5)
-limit clause hocche amra koto guli row query er moddhe dekhte chai seta nerdharon kore. Ete amra query er output ke limit korte pari, jemon amra chayle 10 ta row dekhte pari.
+LIMIT ক্লজ হলো যেখানে আমরা নির্ধারণ করি কতগুলো সারি কোয়েরির ফলাফল হিসেবে দেখতে চাই। এর মাধ্যমে আমরা কোয়েরির আউটপুটকে সীমাবদ্ধ করতে পারি, যেমন আমরা চাই ১০টি সারি দেখতে।
 
-offset clause hocche amra koto guli row skip korte chai seta nerdharon kore. Ete amra query er output theke kichu row skip korte pari, jemon amra chayle prothom 10 ta row skip kore porer 10 ta row dekhte pari.
+OFFSET ক্লজ হলো যেখানে আমরা নির্ধারণ করি কতগুলো সারি স্কিপ বা বাদ দিতে চাই। এর মাধ্যমে আমরা কোয়েরির ফলাফল থেকে কিছু সারি বাদ দিতে পারি, যেমন প্রথম 5টি সারি বাদ দিয়ে পরের 5টি সারি দেখতে চাই।
 
-ba ei vabe dekhte pari limit 5 offset 5 *0, 5 offset 5 *1 eta see more button e apply korte pari ba next-page previous-page er modde use korte pari.
+LIMIT 5 OFFSET 5 * 0 মানে প্রথম ৫টি সারি দেখানো, আর LIMIT 5 OFFSET 5 * 1 মানে প্রথম ৫টি বাদ দিয়ে পরের ৫টি সারি দেখানো। এই পদ্ধতিটা আমরা See More button বা নেক্সট-পেজ, প্রিভিয়াস-পেজ ফাংশনে ব্যবহার করতে পারি।
+
 

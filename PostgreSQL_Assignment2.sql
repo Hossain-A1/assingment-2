@@ -16,11 +16,12 @@ INSERT INTO rangers (name, region) VALUES
 
 CREATE Table species (
   species_id  SERIAL PRIMARY key,
-  common_name VARCHAR(50) NOT NULL,
+   common_name VARCHAR(50) NOT NULL,
   scientific_name VARCHAR(100) NOT NULL,
-  discovery_date DATE NOT NULL,
+   discovery_date DATE NOT NULL,
   conservation_status VARCHAR(50) NOT NULL
 )
+
 
 
 -- Insert sample data
@@ -41,6 +42,7 @@ CREATE Table sightings (
   sighting_time TIMESTAMP,
 notes TEXT 
 )
+
 
 
 
@@ -100,10 +102,3 @@ WHERE ranger_id NOT IN (
   SELECT ranger_id from sightings
 );
 
-
-
-select * from sightings
-
-select * from species 
-
-select * from rangers
